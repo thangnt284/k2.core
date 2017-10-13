@@ -19,18 +19,6 @@ include_once 'k2-framework/K2Framework.php';
 if (!class_exists('k2_core')) {
     class k2_core extends K2Framework
     {
-        /* single instance of the class */
-        public $file = '';
-
-        public $basename = '';
-
-        /* base plugin_dir. */
-        public $plugin_dir = '';
-        public $plugin_url = '';
-
-        /* base acess folder. */
-        public $acess_dir = '';
-        public $acess_url = '';
         public static $instance;
 
         public static function instance()
@@ -48,14 +36,6 @@ if (!class_exists('k2_core')) {
         private function setup_globals()
         {
             parent::__construct();
-//            $this->file = __FILE__;
-//
-//            /* base name. */
-//            $this->basename = plugin_basename($this->file);
-//
-//            /* base plugin. */
-//            $this->plugin_dir = plugin_dir_path($this->file);
-//            $this->plugin_url = plugin_dir_url($this->file);
         }
 
         private function includes()
@@ -64,8 +44,6 @@ if (!class_exists('k2_core')) {
                 require_once $this->plugin_dir . '/frameworks/scss/scss.inc.php';
             }
             require_once $this->plugin_dir . '/frameworks/ReduxCore/framework.php';
-            require_once $this->plugin_dir . '/frameworks/Metacore/framework.php';
-            require_once $this->plugin_dir . '/frameworks/Taxonomy/framework.php';
             $this->fs_require_folder('core/admin/widgets');
             $this->fs_require_folder('core/api');
             $this->fs_require_folder('core/admin');
