@@ -63,9 +63,9 @@ if (!class_exists('k2_core')) {
             if (!class_exists('scssc')){
                 require_once $this->plugin_dir . '/frameworks/scss/scss.inc.php';
             }
-            require_once $this->plugin_dir . 'frameworks/ReduxCore/framework.php';
-            require_once $this->plugin_dir . 'frameworks/Metacore/framework.php';
-            require_once $this->plugin_dir . 'frameworks/Taxonomy/framework.php';
+            require_once $this->plugin_dir . '/frameworks/ReduxCore/framework.php';
+            require_once $this->plugin_dir . '/frameworks/Metacore/framework.php';
+            require_once $this->plugin_dir . '/frameworks/Taxonomy/framework.php';
             $this->fs_require_folder('core/admin/widgets');
             $this->fs_require_folder('core/api');
             $this->fs_require_folder('core/admin');
