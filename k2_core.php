@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 include_once 'k2-framework/K2Framework.php';
 
 if (!class_exists('k2_core')) {
-    class k2_core
+    class k2_core extends K2Framework
     {
         public static $instance;
 
@@ -74,5 +74,9 @@ if (!class_exists('k2_core')) {
         return k2_core::instance();
     }
 
-    $GLOBALS['k2_core'] = k2_core();
+    if (defined('k2_core_LATE_LOAD')) {
+        add_action('plugins_loaded', 'k2_core', (int)k2_core_LATE_LOAD);
+    } else {
+        $GLOBALS['k2_core'] = k2_core();
+    }
 }
