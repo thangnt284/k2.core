@@ -2,7 +2,7 @@
 /*
 Plugin Name: K2 Core
 Plugin URI: http://k2-wordpress.com
-Description: Assit for Theme K2
+Description: Assist for Theme K2
 Version: 1.0.0
 Author: K2 Wordpress
 Author URI: http://k2-wordpress.com
