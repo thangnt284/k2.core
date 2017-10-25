@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: K2 Core
-Plugin URI: http://k2-wordpress.com
-Description: Assist for Theme K2
+Plugin URI: http://k2.com.vn
+Description: K2 core development by K2 Team.
 Version: 1.0.0
-Author: K2
-Author URI: http://k2-wordpress.com
+Author: K2 Team
+Author URI: http://k2.com.vn
 License: GPL2
 Text Domain: k2-core
 */
@@ -44,13 +44,13 @@ if (!class_exists('k2_core')) {
                 require_once $this->plugin_dir . '/k2-framework/scss/scss.inc.php';
             }
             require_once $this->plugin_dir . '/k2-framework/ReduxCore/framework.php';
-            $this->fs_require_folder('core/admin/widgets');
-            $this->fs_require_folder('core/api');
-            $this->fs_require_folder('core/admin');
-            $this->fs_require_folder('core/frontend');
-            $this->fs_require_folder('core/admin/post');
-            $this->fs_require_folder('core/admin/settings');
-            $this->fs_require_folder('core/admin/shortcodes');
+            $this->fs_require_folder('includes');
+//            $this->fs_require_folder('includes/api');
+            $this->fs_require_folder('includes/vc-params');
+            $this->fs_require_folder('assets/css');
+            $this->fs_require_folder('assets/js');
+//            $this->fs_require_folder('core/admin/settings');
+//            $this->fs_require_folder('core/admin/shortcodes');
         }
 
         private function setup_actions()
