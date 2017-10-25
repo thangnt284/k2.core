@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: K2 Core
-Plugin URI: http://k2.com.vn
+Plugin URI: http://k2-wordpress.com
 Description: K2 core development by K2 Team.
 Version: 1.0.0
-Author: K2 Team
-Author URI: http://k2.com.vn
+Author: K2 Wordpress
+Author URI: http://k2-wordpress.com
 License: GPL2
 Text Domain: k2-core
 */
