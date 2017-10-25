@@ -4,7 +4,7 @@ Plugin Name: K2 Core
 Plugin URI: http://k2-wordpress.com
 Description: Assist for Theme K2
 Version: 1.0.0
-Author: K2 WordPress
+Author: K2
 Author URI: http://k2-wordpress.com
 License: GPL2
 Text Domain: k2-core
