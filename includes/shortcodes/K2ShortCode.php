@@ -43,7 +43,7 @@ if(!class_exists('K2ShortCode')){
             $child_dir = get_stylesheet_directory() . '/vc_templates';
             $reg = "/^({$this->shortcode}\.php|{$this->shortcode}--.*\.php)/";
             $files = K2FileScanFromDirectory($theme_dir, $reg);
-            $files = array_merge(K2FileScanFromDirectory(CMS_TEMPLATES, $reg), $files);
+            $files = array_merge(K2FileScanFromDirectory(k2_core()->plugin_dir, $reg), $files);
             $files = array_merge($files, K2FileScanFromDirectory($child_dir, $reg));
             return $files;
         }
