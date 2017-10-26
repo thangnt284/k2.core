@@ -9,6 +9,7 @@ if(!defined('ABSPATH')){
 }
 if(!class_exists('K2ShortCode')){
     class K2ShortCode extends WPBakeryShortCode{
+
         protected function loadTemplate($atts, $content = null) {
             $output = '';
             $cms_template = isset($atts['cms_template']) ? $atts['cms_template'] : $this->shortcode.'.php';
@@ -47,5 +48,4 @@ if(!class_exists('K2ShortCode')){
             return $files;
         }
     }
-    new K2ShortCode();
 }

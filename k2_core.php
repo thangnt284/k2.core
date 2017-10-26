@@ -45,13 +45,17 @@ if (!class_exists('k2_core')) {
             }
             require_once $this->plugin_dir . '/k2-framework/ReduxCore/framework.php';
             $this->fs_require_folder('includes');
+            add_action('vc_before_init', array($this, 'k2Shortcode'));
 //            $this->fs_require_folder('includes/api');
             $this->fs_require_folder('includes/vc-params');
-            $this->fs_require_folder('includes/shortcodes');
+//            $this->fs_require_folder('includes/shortcodes');
             $this->fs_require_folder('assets/css');
             $this->fs_require_folder('assets/js');
 //            $this->fs_require_folder('core/admin/settings');
 //            $this->fs_require_folder('core/admin/shortcodes');
+        }
+        function k2Shortcode(){
+            require_once $this->plugin_dir . '/includes/shortcodes/K2ShortCode.php';
         }
 
         private function setup_actions()
