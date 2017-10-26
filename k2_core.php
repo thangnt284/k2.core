@@ -47,6 +47,7 @@ if (!class_exists('k2_core')) {
             $this->fs_require_folder('includes');
 //            $this->fs_require_folder('includes/api');
             $this->fs_require_folder('includes/vc-params');
+            $this->fs_require_folder('includes/shortcodes');
             $this->fs_require_folder('assets/css');
             $this->fs_require_folder('assets/js');
 //            $this->fs_require_folder('core/admin/settings');
