@@ -23,8 +23,6 @@ if (!class_exists('k2_test_params')) {
                 "base"     => "bartag",
                 "class"    => "",
                 "category" => __("Content", "my-text-domain"),
-//                'admin_enqueue_js' => array(get_template_directory_uri().'/vc_extend/bartag.js'),
-//                'admin_enqueue_css' => array(get_template_directory_uri().'/vc_extend/bartag.css'),
                 "params"   => array(
                     array(
                         "type"        => "k2_images_param",
