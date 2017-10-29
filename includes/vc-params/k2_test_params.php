@@ -34,8 +34,7 @@ if (!class_exists('k2_test_params')) {
                             'k' => 'haha',
                             'p' => 'hehe'
                         ),
-                        'value'=>'k',
-                        "description" => __("Description for foo param.", "k2-core")
+                        'value'=>'k'
                     )
                 )
             ));

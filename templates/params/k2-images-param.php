@@ -34,7 +34,7 @@ foreach ($settings['values'] as $key => $layout) {
     <?php
 }
 ?>
-<input type="hidden" class="wpb_vc_param_value wpb-textinput pp-img-val <?php echo $settings['param_name'] ?>"
+<input type="hidden" class="wpb_vc_param_value wpb-textinput k2-img-val <?php echo $settings['param_name'] ?>"
        name="<?php echo $settings['param_name'] ?>" value="<?php echo isset($value) ? $value : '' ?>">
 <script>
     (function ($) {
