@@ -34,9 +34,15 @@ foreach ($settings['values'] as $key => $layout) {
     <?php
 }
 ?>
-<input type="hidden" class="wpb_vc_param_value wpb-textinput k2-img-val <?php echo $settings['param_name'] ?>"
-       name="<?php echo $settings['param_name'] ?>" value="<?php echo isset($value) ? $value : '' ?>">
-<script>
+<select class="wpb_vc_param_value k2-img-val" name="<?php echo $settings['param_name'] ?>" id="<?php echo $settings['param_name'] ?>" style="display: none">
+    <?php
+    foreach ($settings['values'] as $key => $layout) {
+    ?>
+    <option value="<?php echo $key ?>" <?php echo (isset($value) && $value === $key) ? 'selected' : '' ?>><?php echo $key ?></option>
+<?php
+}
+?>
+</select><script>
     (function ($) {
         $(document).on('click', '.k2-img-item', function (e) {
             e.preventDefault();
