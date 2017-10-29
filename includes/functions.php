@@ -21,7 +21,7 @@ function K2FileScanFromDirectory($dir, $mask, $options = array(), $depth = 0) {
                 $uri = "$dir/$filename";
                 if (is_dir($uri) && $options['recurse']) {
                     // Give priority to files in this folder by merging them in after any subdirectory files.
-                    $files = array_merge(cmsFileScanDirectory($uri, $mask, $options, $depth + 1), $files);
+                    $files = array_merge(K2FileScanFromDirectory($uri, $mask, $options, $depth + 1), $files);
                 } elseif ($depth >= $options['min_depth'] && preg_match($mask, $filename)) {
                     // Always use this match over anything already set in $files with the
                     // same $$options['key'].
