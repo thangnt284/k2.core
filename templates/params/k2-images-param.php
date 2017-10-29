@@ -49,6 +49,7 @@ foreach ($settings['values'] as $key => $layout) {
             var _this = $(this);
             var _val = $(this).attr('data-imglayout');
             $('.k2-img-val').val(_val);
+            $('.k2-img-val').trigger('change');
             $('.k2-img-item').removeClass('k2-img-active');
             _this.addClass('k2-img-active');
         });
