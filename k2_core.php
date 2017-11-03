@@ -40,7 +40,7 @@ if (!class_exists('k2_core')) {
 
         private function includes()
         {
-            if (!class_exists('scssc')){
+            if (!class_exists('scssc')) {
                 require_once $this->plugin_dir . '/k2-framework/scss/scss.inc.php';
             }
             require_once $this->plugin_dir . '/k2-framework/ReduxCore/framework.php';
@@ -53,10 +53,23 @@ if (!class_exists('k2_core')) {
             $this->fs_require_folder('assets/js');
 //            $this->fs_require_folder('core/admin/settings');
 //            $this->fs_require_folder('core/admin/shortcodes');
+            add_action('wp_head', array($this, 'add_scripts_to_head'));
+//            add_action('wp_enqueue_scripts', array($this, 'add_scripts'));
         }
-        function k2Shortcode(){
+
+        function k2Shortcode()
+        {
             require_once $this->plugin_dir . '/includes/shortcodes/K2ShortCode.php';
         }
+
+        function add_scripts_to_head()
+        {
+            echo '<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDviganm7862Pgo16Pex7zK7gBEF4NuH4A" type="text/javascript"></script>';
+            echo '<script src="'.$this->plugin_url.'/assets/js/k2-map.js" type="text/javascript"></script>';
+        }
+//        function add_scripts(){
+//            wp_enqueue_script('k2-map',$this->plugin_url.'/assets/js/k2-map.js','','all',false);
+//        }
 
         private function setup_actions()
         {

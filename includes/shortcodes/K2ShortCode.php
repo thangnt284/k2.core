@@ -36,7 +36,7 @@ if(!class_exists('K2ShortCode')){
 
         /**
          *
-         * @return Array(): array of all avaiable templates
+         * @return Array(): array of all available templates
          */
         protected function findShortcodeTemplates() {
             $theme_dir = get_template_directory() . '/vc_templates';
