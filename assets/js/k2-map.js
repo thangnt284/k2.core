@@ -183,7 +183,13 @@
                     }
                 ]
             }
-        ]
+        ],
+        zoomControl: true,
+        mapTypeControl: true,
+        scaleControl: true,
+        streetViewControl: true,
+        rotateControl: true,
+        fullscreenControl: true
     };
 
     /**
@@ -210,7 +216,13 @@
             var _options = {
                 zoom: _this.options.zoom,
                 center: _this.options.center,
-                styles: _this.options.styles
+                styles: _this.options.styles,
+                zoomControl: _this.options.zoomControl,
+                mapTypeControl: _this.options.mapTypeControl,
+                scaleControl: _this.options.scaleControl,
+                streetViewControl: _this.options.streetViewControl,
+                rotateControl: _this.options.rotateControl,
+                fullscreenControl: _this.options.fullscreenControl
             };
             var k2_map = new google.maps.Map(document.getElementById(element_id),_options);
         }
